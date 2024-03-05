@@ -10,7 +10,7 @@ public class MainArte {
         menu();
     }
 
-    static void menu() {
+    private static void menu() {
         int opcion;
         do {
             System.out.println("Menú:");
@@ -57,7 +57,7 @@ public class MainArte {
         } while (opcion != 8);
     }
 
-    static void añadirObra() {
+    private static void añadirObra() {
         System.out.println("Ingresa el nombre de la obra:");
         String nombre = scanner.nextLine();
         System.out.println("Ingresa el tipo de obra:");
@@ -81,7 +81,7 @@ public class MainArte {
         System.out.println("Obra añadida correctamente");
     }
 
-    static void añadirArtista() {
+    private static void añadirArtista() {
         System.out.println("Ingresa el nombre del artista:");
         String nombre = scanner.nextLine();
         System.out.println("Ingresa la nacionalidad del artista:");
@@ -92,7 +92,7 @@ public class MainArte {
         System.out.println("Artista añadido correctamente");
     }
 
-    static void buscarObraPorNombre() {
+    private static void buscarObraPorNombre() {
         System.out.print("Ingresa el nombre de la obra a buscar: ");
         String nombreObra = scanner.nextLine();
         boolean encontrada = false;
@@ -109,7 +109,7 @@ public class MainArte {
         }
     }
 
-    static void buscarObrasPorArtista() {
+    private static void buscarObrasPorArtista() {
         System.out.print("Ingresa el nombre del artista: ");
         String nombreArtista = scanner.nextLine();
         boolean encontrada = false;
@@ -125,7 +125,7 @@ public class MainArte {
         }
     }
 
-    static void eliminarObra() {
+    private static void eliminarObra() {
         System.out.println("Ingresa el nombre de la obra a eliminar:");
         String nombreObra = scanner.nextLine();
         boolean eliminada = false;
@@ -142,7 +142,7 @@ public class MainArte {
         }
     }
 
-    static void encontrarObraMasBarata() {
+    private static void encontrarObraMasBarata() {
         if (obras.isEmpty()) {
             System.out.println("No hay obras registradas en el sistema");
             return;
@@ -159,7 +159,7 @@ public class MainArte {
         mostrarDetallesObra(obraMasBarata);
     }
 
-    static void encontrarObraMasModerna() {
+    private static void encontrarObraMasModerna() {
         if (obras.isEmpty()) {
             System.out.println("No hay obras registradas en el sistema");
             return;
@@ -176,7 +176,7 @@ public class MainArte {
         mostrarDetallesObra(obraMasModerna);
     }
 
-    static void mostrarDetallesObra(Obra obra) {
+    private static void mostrarDetallesObra(Obra obra) {
         System.out.println("Nombre: " + obra.nombre);
         System.out.println("Tipo: " + obra.tipo);
         System.out.println("Precio: " + obra.precio);
@@ -184,7 +184,7 @@ public class MainArte {
         System.out.println("Artista: " + obra.artista.nombre);
     }
 
-    static Artista buscarArtista(String nombre) {
+    private static Artista buscarArtista(String nombre) {
         for (Artista artista : artistas) {
             if (artista.nombre.equalsIgnoreCase(nombre)) {
                 return artista;
