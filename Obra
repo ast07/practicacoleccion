@@ -1,0 +1,15 @@
+class Obra {
+    String nombre;
+    String tipo;
+    double precio;
+    int anio;
+    Artista artista;
+
+    public Obra(String nombre, String tipo, double precio, int anio, Artista artista) {
+        this.nombre = nombre;
+        this.tipo = tipo;
+        this.precio = precio;
+        this.anio = anio;
+        this.artista = artista;
+    }
+}
